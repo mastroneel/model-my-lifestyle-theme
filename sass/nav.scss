@@ -1,0 +1,36 @@
+.nav {
+  height: 70px;
+  line-height: 70px;
+  background: $green;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  .content-margins {
+    margin: 0 25px;
+    .logo {
+      float: left;
+      a {
+        img {
+          width: 300px;
+        }
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      float: right;
+      li {
+        display: inline-flex;
+        color: $lime;
+        a, a:visited {
+          color: $lime;
+          font-size: 16px;
+        }
+        &.divider {
+          margin: 0 25px;
+        }
+      }
+    }
+  }
+}

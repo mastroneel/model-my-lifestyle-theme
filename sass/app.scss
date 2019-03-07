@@ -1,0 +1,388 @@
+// ************
+// import fonts
+// ************
+
+@font-face {
+  font-family: 'Montserrat 800';
+  src: url('../assets/fonts/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat 700';
+  src: url('../assets/fonts/Montserrat-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat 400';
+  src: url('../assets/fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat 300';
+  src: url('../assets/fonts/Montserrat-Light.ttf');
+}
+
+// ************
+// import files
+// ************
+
+@import 'variables';
+@import 'nav';
+@import 'footer';
+
+// **************
+// general styles
+// **************
+
+html {
+  font-family: 'Montserrat 400', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  max-width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.page-container {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-margins {
+  margin: 0 25px;
+}
+
+h1 {
+  font-size: 98px;
+  line-height: 117px;
+  font-family: 'Montserrat 800';
+}
+
+h2 {
+  font-size: 88px;
+  line-height: 91px;
+  font-family: 'Montserrat 800';
+}
+
+h3 {
+  font-size: 75px;
+  line-height: 78px;
+  font-family: 'Montserrat 800';
+}
+
+h4 {
+  font-size: 59px;
+  line-height: 65px;
+  font-family: 'Montserrat 700';
+}
+
+h5 {
+  font-size: 36px;
+  line-height: 58px;
+  font-family: 'Montserrat 400';
+}
+
+h6 {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: 'Montserrat 300';
+}
+
+h6.important {
+  font-family: 'Montserrat 700';
+}
+
+p {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: 'Montserrat 400';
+}
+
+a {
+  font-size: 24px;
+  line-height: 27px;
+  font-family: 'Montserrat 700';
+  text-decoration: none;
+}
+
+a.menu {
+  font-family: 'Montserrat 400';
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+
+// general button styles
+.button {
+  width: 300px;
+  // height: 45px;
+  display: block;
+  line-height: 45px;
+  transition: 0.2s;
+  margin: 20px 0;
+  .button-text {
+    font-size: 20px;
+    display: inline-block;
+    width: 224px;
+    padding-left: 25px;
+    height: 45px;
+    border: 3px solid;
+    border-right: none;
+    transition: 0.2s;
+  }
+  .caret {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    float: right;
+    // margin-top: -49px;
+    text-align: center;
+    font-size: 1.8em;
+    border: 3px solid;
+    border-left: none;
+  }
+}
+
+// red button styles
+.red-button, .red-button:visited {
+  color: $red;
+  .button-text {
+    border-color: $dark-red;
+  }
+  .caret {
+    background-color: $dark-red;
+    border-color: $dark-red;
+  }
+  &.toggle {
+    border: none;
+    .button-text {
+      color: $pink;
+      border-color: $red;
+      background-color: $red;
+      margin-left: 0;
+    }
+  }
+  &:hover {
+    .button-text {
+      color: $white;
+      border-color: $dark-red;
+      background-color: $dark-red;
+      transition: 0.2s;
+    }
+  }
+}
+
+// red button on red background styles
+.red-background {
+  background-color: $red;
+  padding: 25px;
+  .red-button {
+    .button-text {
+      color: $pink;
+    }
+    &.toggle {
+      .button-text {
+        color: $dark-red;
+        background-color: $white;
+        border-color: $white;
+      }
+    }
+    &:hover {
+      .button-text {
+        background-color: $dark-red;
+        border-color: $dark-red;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+// orange button styles
+.orange-button, .orange-button:visited {
+  color: $orange;
+  .button-text {
+    border-color: $dark-orange;
+  }
+  .caret {
+    background-color: $dark-orange;
+    border-color: $dark-orange;
+  }
+  &.toggle {
+    border: none;
+    .button-text {
+      color: $yellow;
+      background-color: $orange;
+      border-color: $orange;
+      background: $orange;
+      margin-left: 0;
+    }
+  }
+  &:hover {
+    .button-text {
+      color: $white;
+      border-color: $dark-orange;
+      background-color: $dark-orange;
+      transition: 0.2s;
+    }
+  }
+}
+
+// orange button on orange background styles
+.orange-background {
+  padding: 25px;
+  background: $orange;
+  .orange-button {
+    .button-text {
+      background-color: $orange;
+      color: $yellow;
+    }
+    &.toggle {
+      .button-text {
+        color: $dark-orange;
+        background-color: $white;
+        border-color: $white;
+      }
+    }
+    &:hover {
+      .button-text {
+        background-color: $dark-orange;
+        border-color: $dark-orange;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+// forest button styles
+.forest-button, .forest-button:visited {
+  color: $forest;
+  .button-text {
+    border-color: $dark-forest;
+  }
+  .caret {
+    background-color: $dark-forest;
+    border-color: $dark-forest;
+  }
+  &.toggle {
+    border: none;
+    .button-text {
+      color: $aqua;
+      background-color: $forest;
+      border-color: $forest;
+      background: $forest;
+      margin-left: 0;
+    }
+  }
+  &:hover {
+    .button-text {
+      color: $white;
+      border-color: $dark-forest;
+      background-color: $dark-forest;
+      transition: 0.2s;
+    }
+  }
+}
+
+// forest button on forest background styles
+.forest-background {
+  padding: 25px;
+  background: $forest;
+  .forest-button {
+    .button-text {
+      background-color: $forest;
+      color: $aqua;
+    }
+    &.toggle {
+      .button-text {
+        color: $dark-forest;
+        background-color: $white;
+        border-color: $white;
+      }
+    }
+    &:hover {
+      .button-text {
+        background-color: $dark-forest;
+        border-color: $dark-forest;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+// green button styles
+.green-button, .green-button:visited {
+  color: $green;
+  .button-text {
+    border-color: $dark-green;
+  }
+  .caret {
+    background-color: $dark-green;
+    border-color: $dark-green;
+  }
+  &.toggle {
+    border: none;
+    .button-text {
+      color: $lime;
+      background-color: $green;
+      border-color: $green;
+      background: $green;
+      margin-left: 0;
+    }
+  }
+  &:hover {
+    .button-text {
+      color: $white;
+      border-color: $dark-green;
+      background-color: $dark-green;
+      transition: 0.2s;
+    }
+  }
+}
+
+// green button on green background styles
+.green-background {
+  padding: 25px;
+  background: $green;
+  .green-button {
+    .button-text {
+      background-color: $green;
+      color: $lime;
+    }
+    &.toggle {
+      .button-text {
+        color: $dark-green;
+        background-color: $white;
+        border-color: $white;
+      }
+    }
+    &:hover {
+      .button-text {
+        background-color: $dark-green;
+        border-color: $dark-green;
+        color: $white;
+      }
+    }
+  }
+}
